@@ -13,9 +13,9 @@ class Employee
     end
     @salary=salary
   end
-  def initialize
-    @name="Anonymous"
-    @salary=0.0
+  def initialize(name,salary)
+    @name=name
+    @salary=salary
   end
   def print_pay_stub
     puts "Name: #{@name}"
@@ -25,7 +25,5 @@ class Employee
   end
 end
 
-musa=Employee.new
-musa.name="Musa"
-musa.salary=50000
+musa=Employee.new("Musa Amoke", 50000)
 musa.print_pay_stub
