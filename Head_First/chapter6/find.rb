@@ -4,4 +4,6 @@ def find_adjective(string)
   words[index+1] #return the word following "is"
 end
 
+lines = [] #create this variable outside the class
+File.open("reviews.txt") do |review_file| #open file and automatically close it
 
