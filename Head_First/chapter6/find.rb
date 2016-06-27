@@ -6,4 +6,5 @@ end
 
 lines = [] #create this variable outside the class
 File.open("reviews.txt") do |review_file| #open file and automatically close it
-
+lines=review.readlines #read every line in the file into an array
+end
