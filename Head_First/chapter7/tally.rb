@@ -5,14 +5,10 @@ File.open("votes.txt") do |file|
   lines=file.readlines
 end
 
-votes = {} #set up an empty hash
+votes = Hash.new(0) #create a new hash with a default object of "0"
 lines.each do |line|
   name = line.chomp #remove the newline character
-  if votes[name]
-    votes[name] +=1 #increment the total for the current name
-  else
-    votes[name] = 1
-  end
+    votes[name] +=1 #increment whatever the value is returned
 end
 
 p votes
