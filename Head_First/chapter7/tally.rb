@@ -8,7 +8,7 @@ end
 votes = {} #set up an empty hash
 lines.each do |line|
   name = line.chomp #remove the newline character
-  if votes[name] != nil
+  if votes[name]
     votes[name] +=1 #increment the total for the current name
   else
     votes[name] = 1
