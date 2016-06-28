@@ -4,3 +4,15 @@ lines = []
 File.open("votes.txt") do |file|
   lines=file.readlines
 end
+
+votes = {} #set up an empty hash
+lines.each do |line|
+  name = line.chomp #remove the newline character
+  if votes[name] != nil
+    votes[name] +=1 #increment the total for the current name
+  else
+    votes[name] = 1
+  end
+end
+
+p votes
