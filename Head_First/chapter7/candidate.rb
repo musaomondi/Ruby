@@ -1,6 +1,7 @@
 class Candidate
   attr_accessor :name, :age, :occupation, :hobby, :birthplace #set up attribute accessors
-  def initialize(name, options) #the hash parameter
+  
+  def initialize(name, options = {} ) #the hash parameter
     self.name=name 
     #get values from the hash instead of directly from parameters
     self.age=options[:age]
@@ -10,5 +11,5 @@ class Candidate
   end
 end
 
-candidate = Candidate.new("Carl Barnes", age: 49, occupation: "Attorney", hobby: "Lacrose", birthplace: "Miami")
+candidate = Candidate.new("Carl Barnes", age: 49, birthplace: "Miami")
 p candidate
