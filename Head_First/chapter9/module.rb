@@ -6,3 +6,12 @@ module MyModule
     puts "second_method called"
   end
 end
+
+
+class MyClass
+  include MyModule #mix MyModule into the class
+end
+
+my_object = MyClass.new
+my_object.first_method
+my_object.second_method
