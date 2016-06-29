@@ -10,5 +10,5 @@ class Candidate
   end
 end
 
-candidate = Candidate.new("Carl Barnes", {:age=>49, :occupation=> "Attorney", :hobby=> "Lacrose", :birthplace=> "Miami"})
+candidate = Candidate.new("Carl Barnes", :age=>49, :occupation=> "Attorney", :hobby=> "Lacrose", :birthplace=> "Miami")
 p candidate
