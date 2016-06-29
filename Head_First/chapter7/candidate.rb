@@ -1,13 +1,14 @@
 class Candidate
   attr_accessor :name, :age, :occupation, :hobby, :birthplace #set up attribute accessors
   
-  def initialize(name, options = {} ) #the hash parameter
+  def initialize(name, age:nil, occupation:nil, hobby:nil, birthplace:"Sleepy Hollow" )
+
     self.name=name 
     #get values from the hash instead of directly from parameters
-    self.age=options[:age]
-    self.occupation=options[:occupation]
-    self.hobby=options[:hobby]
-    self.birthplace=options[:birthplace]
+    self.age=age
+    self.occupation=occupation
+    self.hobby=hobby
+    self.birthplace=birthplace
   end
 end
 
