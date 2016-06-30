@@ -4,6 +4,10 @@ class Steak
   def > (other)
     grade_scores = {"Prime" => 3, "Choice" => 2, "Select" => 1 }
     grade_scores[grade] > grade_scores[other.grade]
+    
+    puts grade_scores["Prime"]
+    puts grade_scores["Choice"]
+    puts grade_scores["Prime"] > grade_scores["Select"]
   end
 end
 
