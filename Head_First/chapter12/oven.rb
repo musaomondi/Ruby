@@ -41,6 +41,9 @@ dinner.each do |item|
   rescue OvenOffError => error
     oven.turn_on
     retry
+
+  ensure
+    oven.turn_off
   end
 end
 
