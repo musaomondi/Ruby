@@ -11,3 +11,11 @@ get('/movies') do
   @movies[2].title = "Terminator"
   erb :index #load "views/index.erb"
 end
+
+get('/movies/new') do
+  erb :new
+end
+
+post ('/movies/create') do #handle POst request for '/movies/create'
+  "Recieved: #{params.inspect}" #send a string containing the form data back to the browser
+end
