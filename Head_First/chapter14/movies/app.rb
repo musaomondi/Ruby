@@ -23,6 +23,8 @@ post ('/movies/create') do #handle POst request for '/movies/create'
   redirect '/movies/new'
   
   get ('/movies/:id') do
-    "Recieved a request for movie ID: #{params['id']}"
+    id = params['id'].to_i
+    @movie = store.find(id)
+    erb :show
   end
 end
