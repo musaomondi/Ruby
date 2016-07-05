@@ -21,4 +21,8 @@ post ('/movies/create') do #handle POst request for '/movies/create'
   @movie.year = params['year']
   store.save(@movie)
   redirect '/movies/new'
+  
+  get ('/movies/:id') do
+    "Recieved a request for movie ID: #{params['id']}"
+  end
 end
