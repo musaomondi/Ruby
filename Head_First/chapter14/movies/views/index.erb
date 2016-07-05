@@ -7,7 +7,7 @@
     <body>
         <h1>My Movies</h1>
         <ul>
-            <li><%=@movie.each do |movie| %></li>
+            <li><% @movie.each do |movie| %></li>
                 <li><%= movie.title %></li>
                 <% end %>
         </ul>

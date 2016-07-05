@@ -1,5 +1,8 @@
 require 'sinatra'
-require 'movie'
+require 'movie' 
+require 'movie_store'
+
+store = MovieStore.new('movies.yml')
 
 get('/movies') do
   @movies = []
@@ -22,5 +25,6 @@ post ('/movies/create') do #handle POst request for '/movies/create'
   @movie.title = params['title']
   @movie.director = params['director']
   @movie.year = params['year']
-  "Recieved: #{params.inspect}" #send a string containing the form data back to the browser
+  store.save(@movie)
+  redirect '/movies/new'
 end
