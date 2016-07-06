@@ -21,10 +21,10 @@ post ('/movies/create') do #handle POst request for '/movies/create'
   @movie.year = params['year']
   store.save(@movie)
   redirect '/movies/new'
-  
-  get ('/movies/:id') do
-    id = params['id'].to_i
-    @movie = store.find(id)
-    erb :show
-  end
 end
+get ('/movies/:id') do
+  id = params['id'].to_i
+  @movie = store.find(id)
+  erb :show
+end
+
